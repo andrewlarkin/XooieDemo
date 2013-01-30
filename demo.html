@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Xooie Demonstration</title>
+        <meta name="description" content="An example of how to implement Xooie">
+        <meta name="keywords" content="JavaScript,Demo,UI,Widgets">
+        <meta name="author" content="Andrew Larkin">
+        <meta charset="UTF-8">
+
+        <script src="assets/javascripts/jquery.js" type="text/javascript"></script>
+        <script src="assets/javascripts/require.js" type="text/javascript"></script>
+        <script src="assets/javascripts/require-config.js" type="text/javascript"></script>
+        <script src="assets/javascripts/underscore.js" type="text/javascript"></script>
+        <script src="assets/javascripts/xooie-0.0.6.js" type="text/javascript"></script>
+
+        <link href="assets/stylesheets/demo.css" type="text/css" rel="stylesheet">
+    </head>
+    <body>
+
+        <section class="demo-section">
+        
+            <!-- Carousel Example -->
+            <div class="demo-carousel" data-widget-type="carousel" data-display-mode="item">
+                <button class="demo-carousel-control prev" type="button" data-role="carousel-control" data-scroll="-1item">&larr;</button>
+                <button class="demo-carousel-control next" type="button" data-role="carousel-control" data-scroll="+1item">&rarr;</button>
+
+                <div>
+                    <ol class="demo-carousel-content" data-role="carousel-content">
+                        <li class="demo-carousel-item"></li>
+                        <li class="demo-carousel-item"></li>
+                        <li class="demo-carousel-item"></li>
+                        <li class="demo-carousel-item"></li>
+                        <li class="demo-carousel-item"></li>
+                        <li class="demo-carousel-item"></li>
+                        <li class="demo-carousel-item"></li>
+                        <li class="demo-carousel-item"></li>
+                        <li class="demo-carousel-item"></li>
+                        <li class="demo-carousel-item"></li>
+                        <li class="demo-carousel-item"></li>
+                        <li class="demo-carousel-item"></li>
+                        <li class="demo-carousel-item"></li>
+                        <li class="demo-carousel-item"></li>
+                        <li class="demo-carousel-item"></li>
+                    </ol>
+                </div>
+
+                <div class="display" data-role="carousel-display"></div>
+
+                <script type="text/x-jquery-tmpl" data-role="carousel-display-template" data-template-language="underscore">
+                    <span><%= current_item %>-<%= last_visible_item %> of <%= total_items %></span>
+                </script>
+                <!-- span><%= current_page %> of <%= total_pages %></span -->
+            </div>
+        </section>
+
+
+        <section class="demo-section hidden">
+            <!-- Tab Example -->
+            <div class="demo-tab" data-widget-type="tab">
+                <ul class="tab-strip" data-role="tab-strip"></ul>
+
+
+                <script type="application/x-jquery-tmpl" data-role="tab-template" data-template-language="underscore">
+                    <li class="demo-tab-control" data-role="tab-selector">
+                        <button type="button" data-tab-control="true" data-tab-index="<%= panel_index %>"><%= panel_label %></button>
+                    </li>
+                </script>
+                <div class="tab-panel-container">
+                    <div class="demo-tab-panel one" data-tab-label="First Tab" data-role="tab-panel">
+                        <h2>Tab One</h2>
+
+                        <p>Tab One Content Goes Here</p>
+                    </div>
+
+                    <div class="demo-tab-panel" data-tab-label="Second Tab" data-role="tab-panel">
+                        <h2>Tab Two</h2>
+
+                        <p>Tab Two Content Goes Here</p>
+                    </div>
+
+                    <div class="demo-tab-panel" data-tab-label="Third Tab" data-role="tab-panel">
+                        <h2>Tab Three</h2>
+
+                        <p>Tab Three Content Goes Here</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="demo-section hidden">
+
+            <!-- Dropdown Example -->
+            <div class="demo-dropdown" data-widget-type="dropdown">
+                <button class="demo-dropdown-handle" type="button" data-role="dropdown-handle">Display Content</button>
+
+                <div class="demo-dropdown-content" data-role="dropdown-content">
+                    Content to be displayed
+                </div>
+
+                <button type="button" data-role="dropdown-handle">Display Content</button>
+                    
+                <div class="demo-dropdown-content" data-role="dropdown-content">
+                    Content Displayed
+                </div>
+
+                <button type="button" data-role="dropdown-handle">Display Content</button>
+                    
+                <div class="demo-dropdown-content" data-role="dropdown-content">
+                    Content Displayed
+                </div>
+
+                <button type="button" data-role="dropdown-handle">Display Content</button>
+                    
+                <div class="demo-dropdown-content" data-role="dropdown-content">
+                    Content Displayed
+                </div>
+            </div>
+        <section class="demo-section">
+
+
+    </body>
+</html>
